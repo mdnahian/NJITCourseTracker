@@ -20,11 +20,11 @@ class NJITCourseTracker:
 
 		foundCourses = []
 
-		print "Getting HTML..."
+		# print "Getting HTML..."
 		rawHTML = self.getHTML(self.base_url)
 		html = BeautifulSoup(rawHTML, "html.parser")
 
-		print 'Finding Courses...'
+		# print 'Finding Courses...'
 		courses = html.findAll(self.match_class(['subject_wrapper']))
 		for course in courses:
 			for courseId in coursesId:
