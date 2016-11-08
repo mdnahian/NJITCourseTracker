@@ -1,4 +1,3 @@
-from main import Main
 from daemon import runner
 from njitcoursetracker import NJITCourseTracker
 from emailer import Emailer
@@ -19,7 +18,7 @@ class App:
         
     def run(self):
         while True:
-            with open('courses.json') as data_file:
+            with open('/root/NJITCourseTracker/courses.json') as data_file:
             	courses = json.load(data_file)
             
            	foundCourses = app.execute(courses)
